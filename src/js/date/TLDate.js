@@ -484,6 +484,12 @@ export const BIG_DATE_SCALES = [ // ( name, units_per_tick, flooring function )
 ];
 
 
+// BigDates with years in this range use TLDate (human-scale) formatting.
+// Upper bound matches the JS Date maximum year; lower bound is per user
+// request ("99,999 BCE to the present").
+const HUMAN_SCALE_MIN_YEAR = -99999;
+const HUMAN_SCALE_MAX_YEAR = 275759;
+
 export const BigDate = TLDate.extend({
     // @data = BigYear object or JS dictionary with date properties
     initialize: function(data, format, format_short) {
@@ -507,6 +513,36 @@ export const BigDate = TLDate.extend({
     _createDateObj: function() {
         var _date = this._getDateData();
         this.data.date_obj = new BigYear(_date.year);
+    },
+
+    /**
+     * For dates within the human-scale range (HUMAN_SCALE_MIN_YEAR to
+     * HUMAN_SCALE_MAX_YEAR), delegate to TLDate formatting so that month
+     * names, BCE labels, and other human-readable formats are used instead
+     * of the cosmological "X million years ago" strings.
+     */
+    getDisplayDate: function(language, format) {
+        if (this.data.display_date) {
+            return this.data.display_date;
+        }
+        var year = this.data.date_obj.getTime(); // BigYear.getTime() returns the year
+        if (year >= HUMAN_SCALE_MIN_YEAR && year <= HUMAN_SCALE_MAX_YEAR) {
+            // If constructed from a config dict, this.data.year is present and
+            // month/day are preserved.  If constructed from a BigYear directly
+            // (e.g. via floor()), only the year is available.
+            var tldate_data = (typeof this.data.year !== 'undefined')
+                ? this.data
+                : { year: year };
+            return new TLDate(tldate_data).getDisplayDate(language, format);
+        }
+        if (!language) {
+            language = Language.fallback;
+        }
+        if (language.constructor != Language) {
+            language = Language.fallback;
+        }
+        var format_key = format || this.data.format;
+        return language.formatDate(this.data.date_obj, format_key);
     },
 
     // Return a new BigDate which has been 'floored' at the given scale.
