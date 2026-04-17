@@ -428,10 +428,10 @@
 
         {
             "media": {
-                "url": "https://fr.wikipedia.org/wiki/Bataille_de_Champigny#/media/Fichier:Champigny,_le_four_%C3%A0_chaux_(d%C3%A9tail).jpg",
-                "caption": "1997 International Tennis Championships - Doubles",
+                "url": "https://en.wikipedia.org/wiki/Mechanical_Turk",
+                "caption": "Mechanical Turk",
                 "credit": "Wikipedia",
-                "link": "https://fr.wikipedia.org/wiki/Bataille_de_Champigny#/media/Fichier:Champigny,_le_four_%C3%A0_chaux_(d%C3%A9tail).jpg"
+                "link": "https://en.wikipedia.org/wiki/Mechanical_Turk"
             },
             "start_date": {
                 "year": "1920"
@@ -605,7 +605,7 @@
         {
             "unique_id": "wikipedia-images",
             "media": {
-                "url": "https://de.wikipedia.org/wiki/Beryllium#/media/Datei:Beryl-Quartz-Emerald-Zambia-33mm_0885.jpg",
+                "url": "https://commons.wikimedia.org/wiki/File:Beryl-Quartz-Emerald-Zambia-33mm_0885.jpg",
                 "credit": "Wikipedia"
             },
             "start_date": {
@@ -629,6 +629,22 @@
             "text": {
                 "headline": "Wikimedia Commons Image links",
                 "text": "Given a link to a wikipedia page about an image, extract best the Wikimedia image URL and use it for the media."
+            },
+            "group": "Image"
+        },
+        {
+            "unique_id": "wikipedia-image-error",
+            "media": {
+                "url": "https://commons.wikimedia.org/wiki/File:This_file_does_not_exist_intentional_error_test.jpg",
+                "caption": "This image intentionally does not exist — used to test error handling.",
+                "credit": "Test"
+            },
+            "start_date": {
+                "year": "1940"
+            },
+            "text": {
+                "headline": "Wikimedia Commons Image (intentional error)",
+                "text": "This slide uses a Commons URL for a file that does not exist, to verify that the error state displays correctly."
             },
             "group": "Image"
         }
