@@ -24,7 +24,7 @@
             },
             "text": {
                 "headline": "YouTube Videos",
-                "text": "<p>if Timeline finds a URL that starts with 'youtube.com' or 'youtu.be', it will try to use it to embed a YouTube video. The <em>protocol</em> part of the URL (e.g. <em>https://</em>) is technically optional.</p><p>You can start at a specific point in the video using the <code>t=#m#s</code> parameter: see <a href='http://youtubetime.com/'>http://youtubetime.com/</a></p>"
+                "text": "<p>if Timeline finds a URL that starts with 'youtube.com' or 'youtu.be', it will try to use it to embed a YouTube video. The <em>protocol</em> part of the URL (e.g. <em>https://</em>) is technically optional.</p><p>You can start at a specific point in the video using the <code>t=#m#s</code> parameter.</p>"
             },
             "background": {
                 "color": "#F45B69"
@@ -532,7 +532,7 @@
         },
         {
             "media": {
-                "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+                "url": "https://localnewsinitiative.northwestern.edu/assets/lna/shared_services/executive_leadership_development_academy.pdf",
                 "credit": "file-examples.com"
             },
             "start_date": {
