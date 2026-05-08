@@ -1,4 +1,8 @@
-3.9.11 (not yet released)
+3.9.12 (not yet released)
+-------------------------
+* Fix bug: youtube URLs with `?t=\d+` (without `s`) should be treated as "start at N seconds"
+
+3.9.11 (2026-04-17)
 -------------------------
 * Update "cosmological" timelines so that relatively recent (-99,999 BCE or more recent) dates are formatted using the same formatting usually used, with `BigDate` formatting only used for dates >=100,000BCE (no current support for formatting far distant future dates, that is those too large for JS date)
 * #668 Directly support CSV configuration
