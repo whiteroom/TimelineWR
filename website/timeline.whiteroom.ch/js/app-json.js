@@ -5,16 +5,16 @@ embed.style.height = getEmbedHeight(bottomOffset);
 //embed.style.height = (parseInt(getComputedStyle(document.body).height) - bottomOffset) + "px";
 
 window.timeline = new TL.Timeline('timeline-embed', 'data/timeline.json', {
+        // theme: 'dark',
 
         font: 'css/fonts.css',
         script_path: 'js/timeline3/',
-        language: "de",
+        language: 'de',
         hash_bookmark: false,
         marker_padding: 8,
         slide_padding_lr: 100,
         start_at_slide: 11,
         scale_factor: 0.667,
-
     });
 
 
