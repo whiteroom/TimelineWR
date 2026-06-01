@@ -6,7 +6,7 @@ embed.style.height = getEmbedHeight(bottomOffset);
 
 window.timeline = new TL.Timeline('timeline-embed', 'data/timeline.json', {
 
-        font: '/css/fonts.css',
+        font: 'css/fonts.css',
         script_path: 'js/timeline3/',
         language: "de",
         hash_bookmark: false,
