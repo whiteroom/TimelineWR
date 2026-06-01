@@ -13,7 +13,7 @@
                 "text": "Die Mondlandefähre Eagle hat erfolgreich auf der Oberfläche des Mare Tranquillitatis (Meer der Ruhe) aufgesetzt. Selbstverständlich durfte ich aufbleiben und das live am TV mitverfolgen."
             },
             "display_date": "",
-            "group": "",
+            "group": "Foo",
             "background": {
                 "color": ""
             },
@@ -160,7 +160,6 @@
                 "text": "Möhlin, Industriestrasse<br>Tobias Dürring, Cedric Merkli, Christian Weber, Susanne Bär, Philippe Hollenstein, Evelyn Lais, Anja Gschwind, Claus Pfisterer"
             },
             "display_date": "",
-            "group": "Foo",
             "background": {
                 "color": ""
             },
