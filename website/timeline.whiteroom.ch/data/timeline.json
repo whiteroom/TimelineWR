@@ -1,0 +1,227 @@
+{
+    "events": [
+        {
+            "media": {
+                "caption": "",
+                "credit": "NASA/Neil Armstrong",
+                "url": "https://soundcloud.com/nasa/apollo-11-eagle-has-landed",
+                "thumbnail": "",
+                "alt": ""
+            },
+            "text": {
+                "headline": "Apollo 11",
+                "text": "Die Mondlandefähre Eagle hat erfolgreich auf der Oberfläche des Mare Tranquillitatis (Meer der Ruhe) aufgesetzt. Selbstverständlich durfte ich aufbleiben und das live am TV mitverfolgen."
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "1969",
+                "month": "7",
+                "day": "20",
+                "hour": 22,
+                "minute": 17,
+                "second": 0,
+                "millisecond": null
+            }
+        },
+        {
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "<iframe src=\"media/1969/Test/index.html\"></iframe>",
+                "thumbnail": "",
+                "alt": ""
+            },
+            "text": {
+                "headline": "Test",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "1969",
+                "month": "",
+                "day": ""
+            }
+        },
+        {
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "media/1978/Volume-29-No5Oct-Nov1978_Seite_1_Bild_0001.jpg@0,5x.jpg",
+                "thumbnail": "media/1978/Volume-29-No5Oct-Nov1978_Seite_1_Bild_0001.jpg@0,5x.jpg",
+                "alt": ""
+            },
+            "text": {
+                "headline": "16th World Gliding Championships",
+                "text": "1978 World Gliding Championships in Chateauroux"
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "1978",
+                "month": "7",
+                "day": ""
+            }
+        },
+        {
+            "media": {
+                "caption": "Honda Civic von Aline Rink<br>geblitzt am Steinengraben 41,  2.12.1995",
+                "credit": "",
+                "url": "media/1991/timeline-project-543z73@0,5x.jpg",
+                "thumbnail": "media/1991/timeline-project-543z73@0,5x.jpg",
+                "alt": ""
+            },
+            "text": {
+                "headline": "26. SOLOTHURNER FILMTAGE",
+                "text": "JA da gab es diese Geschichte mit den Enten. Wer die Enten füttert, darf das Auteli benutzen. Fülle hat sie gefüttert. Ich bin mit dem kleinen Honda nach Solothurn gedüst. Es wird behauptet es gäbe eine Busse, welche alles hat auffliegen lassen. Das stimmt nicht, es war ein liegengelassenes Parkticket. Die Busse war vom Steinengraben 41, am 2.12.1995, also Jahre später! Mir war das sowiese egal. Ich war unterwegs zu etwas Neuem. Schon in Paris hatte ich die Schnauze voll von einem Leben als Ingenieur in Reinach. Ab April 1991 war dann klar, dass die Zeit in der Habasit vorbei ist und es mich zum Film/Foto drängt."
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "1991",
+                "month": "1",
+                "day": "22"
+            },
+            "end_date": {
+                "year": "1991",
+                "month": "1",
+                "day": "27"
+            }
+        },
+        {
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "<iframe src=\"media/1991/Wendenstock/index.html\"></iframe>",
+                "thumbnail": "media/1991/Wendenstock/Scan_9@0,5x.jpg",
+                "alt": ""
+            },
+            "text": {
+                "headline": "Wendenstöck, Engelberg",
+                "text": "Datum völlig unklar. Polaroid deutet auf SfG Zeit hin. Rucksack sieht rel. neu aus (gibt es heute noch)"
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "1991",
+                "month": "9",
+                "day": ""
+            }
+        },
+        {
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "media/1993/20230425195409_00012.jpg",
+                "thumbnail": "media/1993/20230425195409_00012.jpg",
+                "alt": ""
+            },
+            "text": {
+                "headline": "Mars",
+                "text": "Premiere grosse Bühne Basel"
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "1993",
+                "month": "5",
+                "day": "15"
+            }
+        },
+        {
+            "media": {
+                "caption": "Canon EOS 5D Mark III",
+                "credit": "",
+                "url": "media/2019/W9-81791801_01.jpg",
+                "thumbnail": "media/2019/W9-81791801_01.jpg",
+                "alt": ""
+            },
+            "text": {
+                "headline": "Manor Foto",
+                "text": "Möhlin, Industriestrasse<br>Tobias Dürring, Cedric Merkli, Christian Weber, Susanne Bär, Philippe Hollenstein, Evelyn Lais, Anja Gschwind, Claus Pfisterer"
+            },
+            "display_date": "",
+            "group": "Foo",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "2019",
+                "month": "5",
+                "day": "24",
+                "hour": 14,
+                "minute": 4,
+                "second": 28,
+                "millisecond": null
+            }
+        },
+        {
+            "media": {
+                "caption": "",
+                "credit": "",
+                "url": "media/2026/IMG_4587@0,33x.jpg",
+                "thumbnail": "media/2026/IMG_4587@0,33x.jpg",
+                "alt": ""
+            },
+            "text": {
+                "headline": "Bau K-104",
+                "text": "<p>Die ehemalige Ciba-Geigy Lehrlingswerkstatt im Gebäude K-104 befand sich im Areal Klybeck in Basel. Das Gelände gehört heute zum Campus Klybeck.</p><p>Die historisch und architektonisch einzigartigen Gebäude im nördlichen Teil des ehemaligen Areals der Chemiefirma BASF sind Teil der Industriegeschichte von Basel und glücklicherweise verschont von schädlichen Giftstoffen im Boden. 2019 wurde das gesamte Werkareal – rund 300’000 m2 – für 1.2 Milliarden Franken an die zwei Immobilieninvestoren Swisslife und Rhystadt AG verkauft, die in Kooperation mit der Stadt Basel ihr Renditeprojekt „KlybeckPlus“ in Form eines Stadtquartiers vorantreiben.</p><p>Mit der professionellen Zwischennutzungsvermittlung «Unterdessen», die zwischen 2019 und 2026 diverse Zwischennutzungsverhältnisse auf dem Areal abwickelte, konnte der Leerstand mittelfristig kaschiert werden, ohne strukturelle Probleme zu lösen. Im Gegenteil: Statt einer dauerhaften öffentlichen Nutzung werden von der Eigentümerschaft Zwischennutzungen strategisch Gebrauch gemacht, um anhand kultureller und künstlerischer Projekte die Wertsteigerung voranzutreiben, ohne eine langfristige Verpflichtung einzugehen. Trotz dem Ausbleiben von Bebauungsplänen wurde den letzten Parteien auf dem Areal fristlos auf Ende April 2026 gekündigt. Das gesamte Areal steht nun leer.</p><p>In der Nacht vom 30. Mai 2026 wurden die leerstehenden Gebäude K106, K104 und K102 im nördlichen Teil des Klybeck-Areals besetzt. Mit der Besetzung des Areals haben Menschen der Stadt Basel einen dringend benötigten selbstorganisierten (Kultur-)raum zurückgeholt!</p>"
+            },
+            "display_date": "",
+            "group": "",
+            "background": {
+                "color": ""
+            },
+            "start_date": {
+                "year": "2026",
+                "month": "06",
+                "day": "01"
+            }
+        }
+    ],
+    "errors": [],
+    "warnings": [],
+    "eras": [],
+    "title": {
+        "media": {
+            "caption": "",
+            "credit": "",
+            "url": "media/2026/Graffiti-Buempliz-Nordbahnhof.jpg",
+            "thumbnail": "",
+            "alt": ""
+        },
+        "text": {
+            "headline": "Thank you for the wonderful time",
+            "text": "<h3>Bern Bümpliz Nord</h3><p>Entlang der Bahnlinie Bern Neuenburg befinden sich im Osten der Stadt Bern die Quartiere Bern Bümpliz und Bern Bethlehem. Mehrheitlich gebaut in den Boomjahren der Nachkriegszeit des 20. Jahrhunderts, repräsentieren grossmassstäbliche Überbauungen wie das Fellergut in Bümpliz und das Tscharnergut in Bethlehem den Siedlungscharakter dieser Epoche. Lange Zeit als Gebiet mit wenig städtischer Qualität und schwierigen sozialen Umständen verpönt, erleben die beiden Stadtteile seit einigen Jahren ihre Renaissance als Wohn- und Arbeitsort in der Stadt Bern. Die Bahnhöfe haben eine zentrale und für die Quartierleben wichtige Verknüpfungsfunktion. Aus dem Herzen des Fellerguts gelangt man in die Unterführung nach Norden; aus dem Süden wird eine eigens dafür angelegte Fuss- und Veloachse mit Alleebaumbestand den Kontakt- und Erschliessungspunkt von Bümpliz und Bethlehem einleiten. Die Raumplanung sieht eine städtebauliche Verdichtung des Bahnhofgebiets vor. Dabei spielt die neue Personenunterführung und deren räumliche Ausrichtung als verknüpfendes Element der Quartiere Bümpliz und Bethlehem eine Schlüsselrolle. Die Aufweitung und Aufwertung der Personenunterführung stärkt die Verbindung der Stadtteile; die Treppen- und Rampenanlagen werden als vertikale räumliche Verbindungselemente gestaltet und auf beiden Seiten inszeniert. Diese städtebauliche Strategie wird in der architektonischen Erarbeitung der vier Dienstleistungs- und Wohngebäude weitergeführt und präzisiert; je zwei gleiche Bauvolumen werden die beiden Baufelder der Überbauung bestimmen. Die stadtraumprägenden Hauszwischenräume übernehmen mit ihrer Ausrichtung den analogen, städtebaulich verbindenden Gestus wie die Personenunterführung. Gleichzeitig bilden die Leerräume die Möglichkeit, private Aussenräume der Wohnungen nach Westen und Osten auszurichten, ohne die städtebauliche Hierarchie der Mühledorfstrasse zu beeinträchtigen. So können die Lärmimmissionen der Geleiseanlagen so gering wie möglich gehalten werden. Allen Wohnungen eigen ist eine ähnliche typologische Raumstruktur; die Kernfigur aus Küche, Réduit und Badezimmer bildet eine umlaufbare Raumabfolge innerhalb des Entrée und dem spezifisch zonierten Wohn- und Essbereich. Nebst dem räumlichen Zentrum mit Küche, Wohn- und Essraum erhalten alle grösseren Wohnungen eine zusätzliche Raumnische, die je nach Nutzungskonzept und Orientierung unterschiedlich bespielt werden kann; in den Südwohnungen kann so, durch Verringerung der Wohnfläche des öffentlichen Bereichs, ein zusätzliches Schlafzimmer gewonnen werden.<br> Quelle: ARMON SEMADENI ARCHITEKTEN</p>"
+        },
+        "display_date": "",
+        "group": "",
+        "background": {
+            "color": ""
+        },
+        "start_date": {
+            "year": "2026",
+            "month": "5",
+            "day": "7"
+        }
+    }
+}

@@ -1,0 +1,183 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit
+}
+
+a {
+    color: inherit !important
+}
+
+figure {
+    margin: 0
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+}
+
+hr {
+    margin: 2rem 0;
+    border: 0;
+    border-top: 1px solid #aaaaaa;
+}
+
+
+html,
+body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+iframe {
+    border: none !important;
+    width: 100% !important;
+}
+
+/* .tl-timenav-slider-background {
+background-color: rgb(184, 184, 184);
+} */
+
+.tl-timemarker .tl-timemarker-content-container {
+    /* background-color: #bebebe; */
+    color: black;
+    border: 0;
+    border-radius: 0;
+    /* border: 1px solid #d9d9d9; */
+    border-left: 2px solid #666666;
+    box-shadow: none;
+          padding-top: 0;
+
+
+}
+
+.tl-text-content-container {
+        display: flex;
+    flex-direction: column;
+}
+.tl-timemarker:hover .tl-timemarker-content-container {
+      border-left-color: #000000;
+}
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content {
+    padding: 4px!important;
+}
+
+
+/* .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
+  text-overflow:unset!important;
+} */
+
+
+/*  restore order to title first, then date 
+.tl-text-headline-container {
+    flex-direction: column !important;
+    -webkit-flex-direction: column !important;
+}
+*/
+
+
+
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline,
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p {
+    font-family: inherit !important;
+}
+
+.tl-slide .tl-slide-scrollable-container {
+    display: flex!important;
+    table-layout:unset;
+}
+
+.tl-slide .tl-slide-content-container {
+    display: flex!important;
+    flex-direction: row;
+   align-items: center;
+         vertical-align: unset;
+
+}
+
+
+.tl-slide .tl-slide-content-container .tl-slide-content {
+    display: flex!important;
+    flex-direction: row-reverse;
+   align-items: center;
+      gap:40px;
+      direction:unset;
+      vertical-align: unset;
+
+}
+
+.tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
+    direction: unset;
+    width: 100%;
+    min-width: unset;
+    float: none;
+
+}
+
+.tl-slide .tl-slide-content-container .tl-slide-content .tl-text {
+    padding: 0 !important;
+    direction:unset;
+      vertical-align: unset;
+      display:flex;
+    width: 100%;
+    max-width: unset;
+}
+
+.tl-slide .tl-media-content-container, .tl-media-content {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+.tl-media-content {
+    margin-bottom: .33334rem;
+width: 100%;
+}
+
+.tl-timeline p {
+    line-height: 1.4em !important;
+}
+
+.tl-caption,
+.tl-credit {
+    text-align: right;
+    direction: ltr;
+    margin: 0;
+}
+
+.tl-timeline .tl-attribution {
+    bottom: -10px;
+    right: 10px;
+    left: unset;
+    font-size: 8px;
+    line-height: 10px;
+    background-color: transparent;
+}
+
+.tl-message, .tl-message-full  {
+display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tl-message .tl-message-container, .tl-message-full .tl-message-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: unset;
+    flex-direction: column;
+    gap:20px;
+}
