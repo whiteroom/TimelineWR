@@ -87,12 +87,13 @@
         cursor: pointer;
         z-index:9;
         position:absolute;
-        bottom:2px;
-        left:0px;
-        font-size:10px;
+        bottom:-10px; /* fix --wR */
+        right:10px; /* fix --wR */
+        font-size:8px; /* fix --wR */
         line-height:10px;
         font-family:@font-sanserif !important;
-        background-color: fadeout(@color-background, 15%);
+        /* background-color: fadeout(@color-background, 15%); fix --wR */
+        background-color: transparent;
         padding:3px;
 
         a {

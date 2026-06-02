@@ -1,3 +1,4 @@
+// out: false
 /*	Mixins.less
 	Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
@@ -102,7 +103,12 @@
 }
 
 // Box Shadow
-.box-shadow(@shadow: 1px 1px 7px rgba(0,0,0,.30)) {
+/* .box-shadow(@shadow: 1px 1px 7px rgba(0,0,0,.30)) {
+	-webkit-box-shadow: @shadow;
+	   -moz-box-shadow: @shadow;
+	        box-shadow: @shadow;
+} that's ugly ---fix wR */
+.box-shadow(@shadow: 0 0 0 transparent) {
 	-webkit-box-shadow: @shadow;
 	   -moz-box-shadow: @shadow;
 	        box-shadow: @shadow;

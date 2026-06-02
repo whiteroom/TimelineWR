@@ -97,7 +97,7 @@
 		height:100%;
 		.disable-selection();
 		
-		// box-shadow: 1px 1px 1px @color-background;
+		/* box-shadow: 1px 1px 1px @color-background; --fix wR*/
 		
 		&:after {
 			
@@ -134,8 +134,9 @@
 		.property-animation(width, @animation-duration, @animation-ease);
 		.animation-timing-cubic-bezier();
 		box-sizing: border-box;
-		border: 1px solid @marker-outline-color;
-		// box-shadow: 1px 1px 1px @color-background;
+		/* that's ugly border: 1px solid @marker-outline-color;
+		box-shadow: 1px 1px 1px @color-background; ---fix wR */
+		border-left:1px solid @marker-outline-color; /* ---fix wR */
 				
 		.tl-timemarker-content {
 			position:relative;
@@ -143,6 +144,7 @@
 			height:100%;
 			z-index:8;
 			padding:5px;
+			/* padding:0; and display: flex; and gap: 5px might work better ---fix wR */
 			.border-box();
 			
 			.tl-timemarker-text {
@@ -159,7 +161,7 @@
 					text-overflow: ellipsis;
 					
 					font-size:12px;
-					line-height:12px;
+					line-height:12px; /* line-height: 1.5 ? ---fix wR */
 					height:100%;
 					overflow:hidden;
 					font-weight:normal;
@@ -167,7 +169,7 @@
 					color:@marker-text-color;
 					position: relative;
 					&.tl-headline-fadeout {
-						&:after {
+						/* do we need this? &:after {
 							content: "";
 							text-align: right;
 							position: absolute;
@@ -176,7 +178,7 @@
 							width: 100%;
 							height: 50%;
 							.marker-text-fade(@marker-color,50%);
-						}
+						} ---fix wR */
 					}
 					
 				}
@@ -184,10 +186,12 @@
 			}
 			
 			.tl-timemarker-media-container {
-				float:left;
+				float:left; /* that's ugly ---fix wR */
+				/* width:@marker-icon-size; ---fix wR */
 				max-width:@marker-icon-size;
 				max-height:@marker-icon-size;
 				overflow:hidden;
+				/* margin-right:0; using flexbox doesn't need this  ---fix wR */
 				margin-right:5px;
 				height:100%;
 				.border-box();
@@ -245,7 +249,7 @@
 			}
 			
 			.tl-timemarker-line-left, .tl-timemarker-line-right {
-				border-color: darken(@marker-color,25);
+				border-color: darken(@marker-color,45);
 				&:after {
 					background-color:@marker-dot-hover-color;
 				}
@@ -256,8 +260,10 @@
 		}
 		
 		.tl-timemarker-content-container {
-            background-color: darken(@marker-color,45);
-			border-color: darken(@marker-color,25);
+            /* background-color: darken(@marker-color,45); too dark ---fix wR */
+            background-color: darken(@marker-color,20);
+			border-left: 1px solid darken(@marker-color,45);/* ---fix wR */
+
 			.property-animation(height, @animation-duration-fast/2, @animation-ease);
 			.property-animation(width, @animation-duration-fast/2, @animation-ease);
 			&.tl-timemarker-content-container-small {
@@ -308,6 +314,8 @@
 	&:hover, &:focus {
 		&.tl-timemarker-active {
 			.tl-timemarker-content-container {
+				border-left: 1px solid fadeout(@color-foreground, 0%);
+
 				.tl-timemarker-content {
 					.tl-timemarker-text {
 						h2.tl-headline {
@@ -362,7 +370,9 @@
 			border-color:fadeout(@color-foreground, 50%);
 			border-width: 1px;
 			z-index:8;
-			// box-shadow: 0px 1px 3px fadeout(@marker-dot-color, 50%);
+			/* box-shadow: 0px 1px 3px fadeout(@marker-dot-color, 50%); that's ugly ---fix wR */
+			box-shadow:none;
+			
 			&:after {
 				
 				//background-color:@color-theme;
@@ -371,16 +381,17 @@
 		}
 		
 		.tl-timemarker-content-container {
-			//background-color:@color-theme;
-			background-color:@color-background;
+			background-color:@color-theme; /* use color ---fix wR */
+			//background-color:@color-background;
 			//color:@color-background;
 			color:@color-foreground;
 			z-index:9;
 			//border: none;
-			border-color:fadeout(@color-foreground, 50%);
+			border-left: 1px solid fadeout(@color-foreground, 50%);
 			
-			//box-shadow:none;
-			// box-shadow: 1px 1px 3px fadeout(@marker-dot-color, 50%);
+			/* box-shadow: 1px 1px 3px fadeout(@marker-dot-color, 50%); that's ugly that's ugly ---fix wR */
+			box-shadow:none;
+
 			.tl-timemarker-content {
 				.tl-timemarker-text {
 					h2.tl-headline {
@@ -389,7 +400,7 @@
 						&.tl-headline-fadeout {
 							&:after {
 								//.marker-text-fade(@color-theme,80%);
-								.marker-text-fade(@color-background,80%);
+								/* .marker-text-fade(@color-background,80%); ---fix wR */
 							}
 						}
 						
@@ -451,7 +462,7 @@
 		}
 		
 		.tl-timemarker-line-right {
-			display:block;
+			/* display:block; ugly, this is no solution --fix wR */
 		}
 		.tl-timemarker-line-left {
 			box-shadow: none;
@@ -493,7 +504,8 @@
 			}
 			
 			.tl-timemarker-line-left, .tl-timemarker-line-right {
-				border-width: 1px;
+				/* border-width: 1px; small periods will otherwise result in ugly doubled lines ---fix wR */
+				border-width:0; 
 				&:after {
 					//background-color:@color-theme !important;
 					background-color:@color-foreground !important;
@@ -501,6 +513,7 @@
 			}
 			.tl-timemarker-line-left {
 				box-shadow: none;
+				border-width: 1px; /*  ---fix wR */
 			}
 		}
 	}

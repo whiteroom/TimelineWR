@@ -19,10 +19,13 @@
 ================================================== */
 /* COLOR SCHEME
 ================================================== */
+/* --fix wR */
+/* --fix wR */
 /* UI COLOR
 ================================================== */
 /* UI
 ================================================== */
+/* that's ugly --fix wR */
 /* Animation
 ================================================== */
 /* GFX
@@ -42,6 +45,11 @@
 /*	Mixins.less
 	Snippets of reusable CSS to develop faster and keep code readable
  * ----------------------------------------------------------------- */
+/* .box-shadow(@shadow: 1px 1px 7px rgba(0,0,0,.30)) {
+	-webkit-box-shadow: @shadow;
+	   -moz-box-shadow: @shadow;
+	        box-shadow: @shadow;
+} that's ugly ---fix wR */
 .tl-timeline {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* VCard
@@ -127,7 +135,7 @@
 }
 .tl-timeline p a:hover,
 .tl-timeline p a:focus {
-  color: #ff2f00;
+  color: #ffea03;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
   .tl-timeline p a {
@@ -137,7 +145,7 @@
   }
   .tl-timeline p a:hover,
   .tl-timeline p a:focus {
-    color: #ff2f00;
+    color: #ffea03;
     text-decoration: underline;
   }
 }
@@ -151,11 +159,11 @@
 }
 .tl-timeline a {
   text-decoration: none;
-  color: #ff2f00;
+  color: #ffea03;
 }
 .tl-timeline a:hover {
   text-decoration: underline;
-  color: #991c00;
+  color: #9c8f00;
 }
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit,
@@ -254,7 +262,7 @@
 }
 .tl-timeline .vcard a:hover .fn,
 .tl-timeline .vcard a:hover .nickname {
-  color: #ff2f00;
+  color: #ffea03;
 }
 .tl-timeline .vcard .fn,
 .tl-timeline .vcard .nickname {
@@ -653,7 +661,7 @@
 }
 .tl-menubar-button:hover,
 .tl-menubar-button:focus-visible {
-  background: #333;
+  background: #222;
   color: #ffffff;
 }
 .tl-menubar-button:hover:disabled,
@@ -666,10 +674,10 @@
 }
 .tl-mobile .tl-menubar-button:hover {
   background-color: rgba(242, 242, 242, 0.67);
-  color: #737373;
+  color: #626262;
 }
 .tl-mobile .tl-menubar-button:active {
-  background: #ff2f00;
+  background: #ffea03;
   color: #ffffff;
 }
 @keyframes invertToBlack {
@@ -834,7 +842,7 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ff2f00;
+  color: #ffea03;
   font-size: 32px;
   line-height: 32px;
   position: absolute;
@@ -959,8 +967,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(229, 229, 229, 0.15);
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   -webkit-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: height 500ms cubic-bezier(0.77, 0, 0.175, 1), width 1000ms cubic-bezier(0.77, 0, 0.175, 1);
@@ -975,8 +983,8 @@
   position: absolute;
   width: 100%;
   background-color: #e5e5e5;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
   height: 100px;
   box-sizing: border-box;
 }
@@ -1007,6 +1015,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  /* box-shadow: 1px 1px 1px @color-background; --fix wR*/
 }
 .tl-timemarker .tl-timemarker-line-left:after,
 .tl-timemarker .tl-timemarker-line-right:after {
@@ -1027,9 +1036,9 @@
   position: absolute;
   background-color: #e5e5e5;
   border: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   height: 100%;
   width: 100px;
   overflow: hidden;
@@ -1043,7 +1052,10 @@
   -o-transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   transition-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
   box-sizing: border-box;
-  border: 1px solid #d9d9d9;
+  /* that's ugly border: 1px solid @marker-outline-color;
+		box-shadow: 1px 1px 1px @color-background; ---fix wR */
+  border-left: 1px solid #d9d9d9;
+  /* ---fix wR */
 }
 .tl-timemarker .tl-timemarker-content-container:hover {
   z-index: 9;
@@ -1054,6 +1066,7 @@
   height: 100%;
   z-index: 8;
   padding: 5px;
+  /* padding:0; and display: flex; and gap: 5px might work better ---fix wR */
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;
@@ -1074,6 +1087,7 @@
   text-overflow: ellipsis;
   font-size: 12px;
   line-height: 12px;
+  /* line-height: 1.5 ? ---fix wR */
   height: 100%;
   overflow: hidden;
   font-weight: normal;
@@ -1081,35 +1095,27 @@
   color: #bfbfbf;
   position: relative;
 }
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after,
-.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p.tl-headline-fadeout:after {
-  content: "";
-  text-align: right;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 50%;
-  background: -moz-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(229, 229, 229, 0)), color-stop(50%, #e5e5e5));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(229, 229, 229, 0) 0%, #e5e5e5 50%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
-  /* IE6-9 */
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout,
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p.tl-headline-fadeout {
+  /* do we need this? &:after {
+							content: "";
+							text-align: right;
+							position: absolute;
+							bottom: 0;
+							right: 0;
+							width: 100%;
+							height: 50%;
+							.marker-text-fade(@marker-color,50%);
+						} ---fix wR */
 }
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container {
   float: left;
+  /* that's ugly ---fix wR */
+  /* width:@marker-icon-size; ---fix wR */
   max-width: 24px;
   max-height: 24px;
   overflow: hidden;
+  /* margin-right:0; using flexbox doesn't need this  ---fix wR */
   margin-right: 5px;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -1154,7 +1160,7 @@
 .tl-timemarker:focus .tl-timemarker-timespan .tl-timemarker-line-left,
 .tl-timemarker:hover .tl-timemarker-timespan .tl-timemarker-line-right,
 .tl-timemarker:focus .tl-timemarker-timespan .tl-timemarker-line-right {
-  border-color: #a6a6a6;
+  border-color: #737373;
 }
 .tl-timemarker:hover .tl-timemarker-timespan .tl-timemarker-line-left:after,
 .tl-timemarker:focus .tl-timemarker-timespan .tl-timemarker-line-left:after,
@@ -1164,8 +1170,10 @@
 }
 .tl-timemarker:hover .tl-timemarker-content-container,
 .tl-timemarker:focus .tl-timemarker-content-container {
-  background-color: #737373;
-  border-color: #a6a6a6;
+  /* background-color: darken(@marker-color,45); too dark ---fix wR */
+  background-color: #b3b3b3;
+  border-left: 1px solid #737373;
+  /* ---fix wR */
   -webkit-transition: height 500ms/2 cubic-bezier(0.77, 0, 0.175, 1), width 500ms/2 cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: height 500ms/2 cubic-bezier(0.77, 0, 0.175, 1), width 500ms/2 cubic-bezier(0.77, 0, 0.175, 1);
   -o-transition: height 500ms/2 cubic-bezier(0.77, 0, 0.175, 1), width 500ms/2 cubic-bezier(0.77, 0, 0.175, 1);
@@ -1206,6 +1214,10 @@
 .tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"] {
   color: #ffffff;
 }
+.tl-timemarker:hover.tl-timemarker-active .tl-timemarker-content-container,
+.tl-timemarker:focus.tl-timemarker-active .tl-timemarker-content-container {
+  border-left: 1px solid #222222;
+}
 .tl-timemarker:hover.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after,
 .tl-timemarker:focus.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after {
   background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
@@ -1243,49 +1255,41 @@
   z-index: 8;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-timespan .tl-timemarker-timespan-content {
-  background-color: #333;
+  background-color: #222;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-line-left,
 .tl-timemarker.tl-timemarker-active .tl-timemarker-line-right {
-  border-color: rgba(51, 51, 51, 0.5);
+  border-color: rgba(34, 34, 34, 0.5);
   border-width: 1px;
   z-index: 8;
+  /* box-shadow: 0px 1px 3px fadeout(@marker-dot-color, 50%); that's ugly ---fix wR */
+  box-shadow: none;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-line-left:after,
 .tl-timemarker.tl-timemarker-active .tl-timemarker-line-right:after {
-  background-color: #333;
+  background-color: #222;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
-  background-color: #ffffff;
-  color: #333;
+  background-color: #ffea03;
+  /* use color ---fix wR */
+  color: #222;
   z-index: 9;
-  border-color: rgba(51, 51, 51, 0.5);
+  border-left: 1px solid rgba(34, 34, 34, 0.5);
+  /* box-shadow: 1px 1px 3px fadeout(@marker-dot-color, 50%); that's ugly that's ugly ---fix wR */
+  box-shadow: none;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
-  color: #333;
+  color: #222;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline.tl-headline-fadeout:after {
-  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(80%, #ffffff));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 80%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@thecolor', endColorstr='@thecolor', GradientType=0);
-  /* IE6-9 */
+  /* .marker-text-fade(@color-background,80%); ---fix wR */
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container .tl-timemarker-media {
   opacity: 1;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class^="tl-icon-"],
 .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"] {
-  color: #333;
+  color: #222;
 }
 .tl-timemarker.tl-timemarker-with-end .tl-timemarker-timespan .tl-timemarker-timespan-content {
   display: block;
@@ -1312,7 +1316,7 @@
   box-shadow: none;
 }
 .tl-timemarker.tl-timemarker-with-end .tl-timemarker-line-right {
-  display: block;
+  /* display:block; ugly, this is no solution --fix wR */
 }
 .tl-timemarker.tl-timemarker-with-end .tl-timemarker-line-left {
   box-shadow: none;
@@ -1321,21 +1325,24 @@
   background-color: rgba(0, 0, 0, 0.35);
 }
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active .tl-timemarker-timespan:after {
-  background-color: rgba(51, 51, 51, 0.5);
+  background-color: rgba(34, 34, 34, 0.5);
 }
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active .tl-timemarker-line-left,
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active .tl-timemarker-line-right {
-  border-width: 1px;
+  /* border-width: 1px; small periods will otherwise result in ugly doubled lines ---fix wR */
+  border-width: 0;
 }
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active .tl-timemarker-line-left:after,
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active .tl-timemarker-line-right:after {
-  background-color: #333 !important;
+  background-color: #222 !important;
 }
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active .tl-timemarker-line-left {
   box-shadow: none;
+  border-width: 1px;
+  /*  ---fix wR */
 }
 .tl-timemarker.tl-timemarker-with-end.tl-timemarker-active:hover .tl-timemarker-timespan:after {
-  background-color: rgba(51, 51, 51, 0.5);
+  background-color: rgba(34, 34, 34, 0.5);
 }
 /* Skinny
 ================================================== */
@@ -1380,35 +1387,35 @@
 }
 .tl-timeera .tl-timeera-background {
   position: absolute;
-  background-color: #00d0ff;
+  background-color: #0318ff;
   width: 100%;
   height: 100%;
   opacity: 1;
 }
 .tl-timeera.tl-timeera-color0 .tl-timeera-background {
-  background-color: #ff2f00;
+  background-color: #ffea03;
 }
 .tl-timeera.tl-timeera-color1 .tl-timeera-background {
-  background-color: #00d0ff;
+  background-color: #0318ff;
 }
 .tl-timeera.tl-timeera-color2 .tl-timeera-background {
-  background-color: #0011ff;
+  background-color: #ab03ff;
 }
 .tl-timeera.tl-timeera-color3 .tl-timeera-background {
-  background-color: #00ff6f;
+  background-color: #03d5ff;
 }
 .tl-timeera.tl-timeera-color4 .tl-timeera-background {
-  background-color: #0072ff;
+  background-color: #4a03ff;
 }
 .tl-timeera.tl-timeera-color5 .tl-timeera-background {
-  background-color: #00ffd1;
+  background-color: #0374ff;
 }
 .tl-timeera .tl-timeera-content-container {
   position: absolute;
   border: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
   height: 100%;
   width: 100px;
   overflow: hidden;
@@ -1835,7 +1842,7 @@
 .tl-slide.tl-full-image-background a:hover,
 .tl-slide.tl-full-color-background a:hover {
   text-decoration: underline;
-  color: #ff2f00;
+  color: #ffea03;
 }
 .tl-slide.tl-full-image-background .tl-caption,
 .tl-slide.tl-full-color-background .tl-caption,
@@ -2048,7 +2055,7 @@
 .tl-slidenav-previous .tl-slidenav-content-container .tl-slidenav-description,
 .tl-slidenav-next .tl-slidenav-content-container .tl-slidenav-description {
   text-shadow: none!important;
-  color: #333;
+  color: #222;
 }
 .tl-slidenav-previous .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-icon,
 .tl-slidenav-next .tl-slidenav-content-container.tl-slidenav-inverted .tl-slidenav-icon,
@@ -2373,7 +2380,7 @@
 .tl-slide.tl-full-image-background a:hover,
 .tl-slide.tl-full-color-background a:hover {
   text-decoration: underline;
-  color: #ff2f00;
+  color: #ffea03;
 }
 /* Credit
 ================================================== */
@@ -2454,10 +2461,10 @@
   vertical-align: middle;
   text-align: left;
   text-shadow: none;
-  color: #737373;
+  color: #626262;
 }
 .tl-text p {
-  color: #737373;
+  color: #626262;
 }
 .tl-text .tl-text-content-container .tl-text-headline-container {
   display: flex;
@@ -2476,14 +2483,14 @@
   line-height: 15px;
   font-weight: normal;
   margin: 0 0 3px 0;
-  color: #b3b3b3;
+  color: #a2a2a2;
 }
 .tl-text .tl-headline-date small,
 .tl-text h3.tl-headline-date small {
   font-size: 15px;
   line-height: 15px;
   font-weight: normal;
-  color: #b3b3b3;
+  color: #a2a2a2;
 }
 .tl-text .tl-text-date {
   display: inline-block;
@@ -2491,7 +2498,7 @@
   font-weight: normal;
   margin-top: 10px;
   font-size: 12px;
-  color: #b3b3b3;
+  color: #a2a2a2;
 }
 .tl-full-image-background .tl-text,
 .tl-full-color-background .tl-text,
@@ -2525,7 +2532,7 @@
 .tl-full-image-background .tl-text p a:hover,
 .tl-full-color-background .tl-text p a:hover {
   text-decoration: underline;
-  color: #ff2f00;
+  color: #ffea03;
 }
 /* Skinny
 ================================================== */
@@ -2564,7 +2571,7 @@
   margin-right: 15px;
   font-size: 15px;
   line-height: 21px;
-  color: #333;
+  color: #222;
 }
 .tl-media .tl-media-twitter blockquote p {
   font-size: 28px;
@@ -2618,12 +2625,12 @@
   text-align: left;
   font-size: 28px;
   line-height: 30px;
-  color: #333;
+  color: #222;
 }
 .tl-media .tl-media-blockquote blockquote p {
   font-size: 28px;
   line-height: 30px;
-  color: #333;
+  color: #222;
 }
 .tl-media .tl-media-blockquote blockquote p:before,
 .tl-media .tl-media-blockquote blockquote p:after {
@@ -2641,7 +2648,7 @@
 .tl-media .tl-media-blockquote blockquote cite {
   font-size: 15px;
   line-height: 21px;
-  color: #999999;
+  color: #888888;
   text-align: right;
   margin-top: 15px;
 }
@@ -2941,7 +2948,7 @@
 .tl-slide.tl-full-image-background .tl-media .tl-media-wikipedia a:hover,
 .tl-slide.tl-full-color-background .tl-media .tl-media-wikipedia a:hover {
   text-decoration: underline;
-  color: #ff2f00;
+  color: #ffea03;
 }
 .tl-slide.tl-full-image-background .tl-media .tl-media-wikipedia .tl-wikipedia-title,
 .tl-slide.tl-full-color-background .tl-media .tl-media-wikipedia .tl-wikipedia-title {
@@ -3014,7 +3021,7 @@
 .tl-slide.tl-full-image-background .tl-media .tl-media-website a:hover,
 .tl-slide.tl-full-color-background .tl-media .tl-media-website a:hover {
   text-decoration: underline;
-  color: #ff2f00;
+  color: #ffea03;
 }
 .tl-mobile.tl-skinny .tl-media .tl-media-website {
   margin-left: 10px;
@@ -3035,7 +3042,7 @@
   -o-user-select: none;
   user-select: none;
   background-color: #ffffff;
-  color: #737373;
+  color: #626262;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -3055,12 +3062,16 @@
   cursor: pointer;
   z-index: 9;
   position: absolute;
-  bottom: 2px;
-  left: 0px;
-  font-size: 10px;
+  bottom: -10px;
+  /* fix --wR */
+  right: 10px;
+  /* fix --wR */
+  font-size: 8px;
+  /* fix --wR */
   line-height: 10px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  background-color: rgba(255, 255, 255, 0.85);
+  /* background-color: fadeout(@color-background, 15%); fix --wR */
+  background-color: transparent;
   padding: 3px;
 }
 .tl-timeline .tl-attribution a {
