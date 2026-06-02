@@ -21,6 +21,7 @@
 ================================================== */
 /* --fix wR */
 /* --fix wR */
+/* --fix wR */
 /* UI COLOR
 ================================================== */
 /* UI
@@ -85,8 +86,8 @@
 .tl-timeline h4 small,
 .tl-timeline h5 small,
 .tl-timeline h6 small {
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 16px;
 }
 .tl-timeline h2.tl-headline-title {
   font-size: 38px;
@@ -105,7 +106,7 @@
 .tl-timeline p {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #666666;
 }
@@ -169,8 +170,8 @@
 .tl-timeline .tl-credit,
 .tl-timeline .tl-slidenav-next,
 .tl-timeline .tl-slidenav-previous {
-  font-size: 11px;
-  line-height: 11px;
+  font-size: 12px;
+  line-height: 14.4px;
 }
 .tl-timeline .tl-caption a,
 .tl-timeline .tl-credit a,
@@ -199,7 +200,7 @@
 .tl-timeline blockquote cite,
 .tl-timeline blockquote p cite {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   color: #666666;
   display: block;
   text-align: right;
@@ -233,8 +234,8 @@
 }
 .tl-timeline .vcard {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 16px;
   margin-bottom: 15px;
   margin-top: 10px;
 }
@@ -248,7 +249,7 @@
 }
 .tl-timeline .vcard .twitter-date {
   text-align: left;
-  font-size: 11px;
+  font-size: 12px;
 }
 .tl-timeline .vcard .author {
   float: right;
@@ -314,9 +315,9 @@
   display: block;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
-  background-color: #ffd500;
-  font-size: 15px;
-  line-height: 17px;
+  background-color: #b5a600;
+  font-size: 16px;
+  line-height: 18px;
   padding: 10px;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
@@ -333,7 +334,7 @@
     line-height: 28px;
   }
 }
-@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+@media only screen and (max-width: 650px), only screen and (max-device-width: 650px) {
   .tl-timeline h1,
   .tl-timeline h2,
   .tl-timeline h3 {
@@ -673,7 +674,7 @@
 }
 .tl-mobile .tl-menubar-button:hover {
   background-color: rgba(242, 242, 242, 0.67);
-  color: #626262;
+  color: #222222;
 }
 .tl-mobile .tl-menubar-button:active {
   background: #ffea03;
@@ -783,6 +784,7 @@
   }
 }
 .tl-message-full {
+  display: none;
   background-color: hsla(0, 0%, 100%, 0.8);
 }
 .tl-message-full [class^="tl-icon-"],
@@ -1064,7 +1066,7 @@
   overflow: hidden;
   height: 100%;
   z-index: 8;
-  padding: 5px;
+  padding: 1cqh;
   /* padding:0; and display: flex; and gap: 5px might work better ---fix wR */
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -1076,6 +1078,13 @@
   overflow: hidden;
   position: relative;
 }
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.5;
+  /* ---fix wR */
+}
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline,
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p {
   display: -webkit-box;
@@ -1085,8 +1094,8 @@
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   font-size: 12px;
-  line-height: 12px;
-  /* line-height: 1.5 ? ---fix wR */
+  /* line-height:12px; ---fix wR */
+  line-height: 1;
   height: 100%;
   overflow: hidden;
   font-weight: normal;
@@ -1138,10 +1147,15 @@
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container .tl-icon-wikipedia {
   font-size: 16px;
 }
+.tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small {
+  padding: 0.667cqh;
+}
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-text h2.tl-headline {
   display: block;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: 1;
+  /* ---fix wR */
 }
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-media-container [class^="tl-icon-"],
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-media-container [class*=" tl-icon-"] {
@@ -1182,6 +1196,11 @@
 .tl-timemarker:focus .tl-timemarker-content-container.tl-timemarker-content-container-small {
   width: 180px!important;
   /* animate markers with end dates as well ---fix wR */
+}
+.tl-timemarker:hover .tl-timemarker-content-container.tl-timemarker-content-container-small .tl-timemarker-content .tl-timemarker-text h2.tl-headline,
+.tl-timemarker:focus .tl-timemarker-content-container.tl-timemarker-content-container-small .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .tl-timemarker:hover .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline,
 .tl-timemarker:focus .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
@@ -1251,7 +1270,9 @@
   outline: none;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-timespan {
-  background-color: rgba(255, 255, 255, 0.5);
+  /* background-color: fadeout(@color-background,50%); 
+			background-color: rgba(0, 147, 255, 0.14); --wR */
+  background-color: rgba(0, 147, 255, 0.12);
   z-index: 8;
 }
 .tl-timemarker.tl-timemarker-active .tl-timemarker-timespan .tl-timemarker-timespan-content {
@@ -1707,6 +1728,8 @@
   position: absolute;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -1723,23 +1746,32 @@
   background-size: cover;
 }
 .tl-slide .tl-slide-scrollable-container {
-  display: table;
-  table-layout: fixed;
-  height: 100%;
+  /* display:table; rebuild to flexbox css --wR */
+  /* table-layout: fixed; rebuild to flexbox css --wR */
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  min-height: 100%;
   z-index: 1;
 }
 .tl-slide .tl-slide-content-container {
-  display: table-cell;
-  vertical-align: middle;
+  /* display:table-cell; rebuild to flexbox css --wR */
+  /* vertical-align:middle; rebuild to flexbox css --wR */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
   width: 100%;
   height: 100%;
   z-index: 3;
 }
 .tl-slide .tl-slide-content-container .tl-slide-content {
-  display: table;
-  vertical-align: middle;
-  direction: rtl;
+  /* display:table; rebuild to flexbox css --wR */
+  /* vertical-align:middle; rebuild to flexbox css --wR */
+  display: flex;
+  flex-direction: row;
+  /* Text first */
+  align-items: center;
   padding-left: 100px;
   padding-right: 100px;
   position: relative;
@@ -1750,22 +1782,23 @@
   box-sizing: content-box;
 }
 .tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
-  direction: ltr;
   position: relative;
   width: 100%;
   min-width: 50%;
-  float: left;
-  margin-top: auto;
-  margin-bottom: auto;
+  /* float: left;
+                margin-top:auto;
+                margin-bottom:auto; rebuild to flexbox css --wR */
 }
 .tl-slide .tl-slide-content-container .tl-slide-content .tl-text {
-  direction: ltr;
   width: 50%;
   max-width: 50%;
   min-width: 120px;
   padding: 0 20px 0 20px;
-  display: table-cell;
-  vertical-align: middle;
+  /* display:table-cell; rebuild to flexbox css --wR */
+  /* vertical-align:middle; rebuild to flexbox css --wR */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-align: left;
 }
 /* Only Media (no text)
@@ -1901,10 +1934,16 @@
 }
 /* Skinny
 ================================================== */
+.tl-medium .tl-slide,
 .tl-skinny .tl-slide {
   display: block;
   padding-top: 10px;
 }
+.tl-medium .tl-slide .tl-slide-scrollable-container,
+.tl-skinny .tl-slide .tl-slide-scrollable-container {
+  align-items: flex-start;
+}
+.tl-medium .tl-slide .tl-slide-content-container,
 .tl-skinny .tl-slide .tl-slide-content-container {
   display: block;
   position: static;
@@ -1916,27 +1955,32 @@
   -webkit-align-items: center;
   /* Safari 7.0+ */
 }
+.tl-medium .tl-slide .tl-slide-content-container .tl-slide-content,
 .tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content {
   display: block;
   display: -webkit-flex;
   /* Safari */
   display: flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  /* Safari */
+  flex-direction: column-reverse;
+  /*  
+				-webkit-flex-direction:column-reverse; /* Safari --wR */
   position: static;
   height: auto;
   padding-left: 50px;
   padding-right: 50px;
 }
+.tl-medium .tl-slide .tl-slide-content-container .tl-slide-content .tl-media,
 .tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content .tl-media {
   width: 100%;
+  max-width: unset !important;
+  /* --wR */
   height: auto;
-  float: none;
+  /* float: none; --wR */
   display: block;
   padding-top: 20px;
-  border-top: 1px solid #e6e6e6;
+  /* border-top: 1px solid @ui-background-color-darker; --wR */
 }
+.tl-medium .tl-slide .tl-slide-content-container .tl-slide-content .tl-text,
 .tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content .tl-text {
   display: block;
   height: auto;
@@ -1945,23 +1989,29 @@
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  float: none;
+  /* float:none; --wR */
   padding: 0;
+  margin-top: 3em;
 }
+.tl-medium .tl-slide .tl-slide-content-container .tl-slide-content .tl-text .tl-text-content-container,
 .tl-skinny .tl-slide .tl-slide-content-container .tl-slide-content .tl-text .tl-text-content-container {
-  padding-left: 10px;
-  padding-right: 10px;
+  /* padding-left:10px;
+						padding-right:10px; --wR */
   padding-bottom: 10px;
 }
+.tl-medium .tl-slide.tl-slide.tl-full-color-background .tl-slide-content-container .tl-slide-content .tl-media,
 .tl-skinny .tl-slide.tl-slide.tl-full-color-background .tl-slide-content-container .tl-slide-content .tl-media,
+.tl-medium .tl-slide.tl-full-image-background .tl-slide-content-container .tl-slide-content .tl-media,
 .tl-skinny .tl-slide.tl-full-image-background .tl-slide-content-container .tl-slide-content .tl-media {
   border-color: rgba(230, 230, 230, 0.25);
 }
+.tl-medium .tl-slide.tl-slide-media-only .tl-slide-content-container .tl-slide-content,
 .tl-skinny .tl-slide.tl-slide-media-only .tl-slide-content-container .tl-slide-content {
   flex-direction: column;
   -webkit-flex-direction: column;
   /* Safari */
 }
+.tl-medium .tl-slide.tl-slide-media-only .tl-slide-content-container .tl-slide-content .tl-media,
 .tl-skinny .tl-slide.tl-slide-media-only .tl-slide-content-container .tl-slide-content .tl-media {
   border-top: none;
   padding-top: 0px;
@@ -2030,12 +2080,12 @@
   -khtml-opacity: 15 / 100;
   -moz-opacity: 15 / 100;
   opacity: 15 / 100;
-  font-size: 11px;
-  line-height: 11px;
+  font-size: 12px;
+  line-height: 12px;
 }
 .tl-slidenav-previous .tl-slidenav-description,
 .tl-slidenav-next .tl-slidenav-description {
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 5px;
   filter: alpha(opacity=0);
   -khtml-opacity: 0 / 100;
@@ -2304,11 +2354,16 @@
 .tl-storyslider .tl-slider-container-mask .tl-slider-container .tl-slider-item-container {
   width: 100%;
   height: 100%;
-  display: table-cell;
-  vertical-align: middle;
+  /* display:table-cell; rebuild to flexbox css --wR */
+  /* vertical-align:middle; rebuild to flexbox css --wR */
+  display: flex;
+  align-items: center;
 }
 /* Skinny
 ================================================== */
+.tl-skinny .tl-storyslider .tl-slider-container-mask {
+  height: calc(100% - 30px);
+}
 /* Mobile, iPhone
 ================================================== */
 /* Mobile, iPhone and skinny
@@ -2330,14 +2385,7 @@
 }
 .tl-media .tl-media-content-container .tl-media-content {
   position: relative;
-}
-.tl-media .tl-media-content-container .tl-media-content:before,
-.tl-media .tl-media-content-container .tl-media-content:after {
-  display: table;
-  content: "";
-}
-.tl-media .tl-media-content-container .tl-media-content:after {
-  clear: both;
+  /* .clearfix(); --wR */
 }
 .tl-media .tl-media-content-container .tl-media-content .tl-media-loaderror p {
   color: #f2f2f2;
@@ -2390,19 +2438,23 @@
   display: block;
   margin: 0 auto;
   margin-top: 6px;
-  font-size: 10px;
+  font-size: 11px;
   line-height: 13px;
 }
 /* Caption
 ================================================== */
 .tl-caption {
   text-align: left;
-  margin-right: auto;
-  margin-left: auto;
+  /* margin-right: auto;
+	margin-left: auto; --wR */
   margin-top: 10px;
-  color: #666666;
-  font-size: 11px;
-  line-height: 14px;
+  color: #959595;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* --wR */
+  line-height: 1.2;
+  /* --wR 
+	font-size: @base-font-size-small; 
+	line-height: 14px; */
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
 }
@@ -2428,10 +2480,10 @@
 }
 .tl-skinny .tl-media .tl-media-content-container .tl-credit,
 .tl-skinny .tl-media .tl-media-content-container .tl-caption {
-  margin-top: 2px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 8px;
+  margin-top: 0.8em;
+  /*padding-left:10px;
+				padding-right:10px; --wR */
+  font-size: 0.8em;
 }
 .tl-skinny .tl-media .tl-media-content-container .tl-credit {
   margin-top: 0px;
@@ -2457,14 +2509,12 @@
   max-width: 50%;
   min-width: 120px;
   padding: 0 20px 0 20px;
-  display: table-cell;
-  vertical-align: middle;
   text-align: left;
   text-shadow: none;
-  color: #626262;
+  color: #222222;
 }
 .tl-text p {
-  color: #626262;
+  color: #222222;
 }
 .tl-text .tl-text-content-container .tl-text-headline-container {
   display: flex;
@@ -2479,18 +2529,20 @@
 .tl-text .tl-headline-date,
 .tl-text h3.tl-headline-date {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 15px;
+  /* font-size:@base-font-size; */
+  font-size: 16px;
+  line-height: 16px;
   font-weight: normal;
-  margin: 0 0 3px 0;
-  color: #a2a2a2;
+  margin: 0 0 0.5em 0;
+  /* color: lighten(@color-text,25); */
+  color: #000;
 }
 .tl-text .tl-headline-date small,
 .tl-text h3.tl-headline-date small {
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 16px;
   font-weight: normal;
-  color: #a2a2a2;
+  color: #626262;
 }
 .tl-text .tl-text-date {
   display: inline-block;
@@ -2498,7 +2550,7 @@
   font-weight: normal;
   margin-top: 10px;
   font-size: 12px;
-  color: #a2a2a2;
+  color: #626262;
 }
 .tl-full-image-background .tl-text,
 .tl-full-color-background .tl-text,
@@ -2569,8 +2621,8 @@
 .tl-media .tl-media-twitter blockquote {
   margin: 0;
   margin-right: 15px;
-  font-size: 15px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 22px;
   color: #222;
 }
 .tl-media .tl-media-twitter blockquote p {
@@ -2604,8 +2656,8 @@
   margin-right: auto;
 }
 .tl-mobile.tl-skinny .tl-media .tl-media-twitter blockquote p {
-  font-size: 15px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 22px;
 }
 .tl-skinny .tl-media .tl-media-twitter {
   margin-left: 10px;
@@ -2646,8 +2698,8 @@
   margin-left: 3px;
 }
 .tl-media .tl-media-blockquote blockquote cite {
-  font-size: 15px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 22px;
   color: #888888;
   text-align: right;
   margin-top: 15px;
@@ -2664,10 +2716,10 @@
     line-height: 26px;
   }
 }
-@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+@media only screen and (max-width: 650px), only screen and (max-device-width: 650px) {
   .tl-media .tl-media-blockquote blockquote p {
-    font-size: 15px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 .tl-mobile.tl-skinny .tl-media .tl-media-instagram {
@@ -2876,6 +2928,11 @@
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
+  .tl-media .tl-media-iframe {
+    max-height: 100vw!important;
+  }
+}
 .tl-media .tl-media-wikipedia {
   text-align: left;
   margin-left: auto;
@@ -3042,7 +3099,7 @@
   -o-user-select: none;
   user-select: none;
   background-color: #ffffff;
-  color: #626262;
+  color: #222222;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;

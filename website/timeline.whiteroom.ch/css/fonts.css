@@ -1,6 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap'); */
-
-
 /* latin */
 @font-face {
     font-family: 'Archivo';
@@ -56,235 +53,131 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
 }
 
-.archivo-narrow {
-    font-family: "Archivo Narrow", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
 
-.newsreader {
-    font-family: "Newsreader", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
 
 
 .tl-timeline {
-    /* font-family: "Newsreader", serif; */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     font-size: 16px;
     line-height: 1.4em;
-    color: #222;
-
 }
-
 .tl-timeline h1,
 .tl-timeline h2,
 .tl-timeline h3,
 .tl-timeline h4,
 .tl-timeline h5,
 .tl-timeline h6 {
-    font-family: "Inter", sans-serif;
+
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     text-transform: none;
     font-weight: 600;
     font-size: 2.2em;
     line-height: 1.05;
-    color: #222;
-    margin-top: 0em !important;
-
 }
-
-.tl-timeline h1,
-.tl-timeline h2 {
-    font-weight: 800;
-}
-
-
 .tl-timeline h2.tl-headline-title {
-    font-size: 58px;
-    line-height: 58px;
+    font-size: 3.2em;
+    line-height: 1.05;
     color: #222;
-
 }
-
 .tl-timeline p {
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
-
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.3em;
-    color: #222;
-
 }
-
 .tl-timeline ul {
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
-    color: #222;
-
 }
-
 .tl-timeline .tl-media .tl-media-wikipedia h4 a,
 .tl-timeline .tl-media h4,
 .tl-timeline .tl-media h4 a {
     font-family: "Newsreader", serif;
     font-optical-sizing: auto;
     color: #222;
-
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 24px;
+    font-weight: 800;
+    font-size: 2em;
+    line-height: 2.05em;
 }
-
 .tl-timeline .tl-caption,
 .tl-timeline .tl-credit {
-    font-family: "Newsreader", serif;
-
-    font-optical-sizing: auto;
-
-}
-
-.tl-credit {
-    font-weight: 400;
-    /* color:#222; */
-
-}
-
-.tl-timeline .tl-caption,
-.tl-timeline .tl-credit,
-.tl-timeline .tl-slidenav-next,
-.tl-timeline .tl-slidenav-previous {
-    font-size: 0.8em;
-    line-height: 1.2em;
-}
-
-.tl-timeline .vcard {
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-weight: 300 !important;
+    text-transform: none !important;
+    font-optical-sizing: auto;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+}
+.tl-timeline .vcard {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     font-weight: normal !important;
-    font-optical-sizing: auto;
-
 }
-
-.tl-timeline blockquote {
-    margin: 1em 0;
-    color: #343434;
-    font-weight: 200 !important;
-    text-transform: none;
-    font-optical-sizing: auto;
-    line-height: 1.4 !important;
-}
-
 .tl-timeline .tl-slidenav-next,
 .tl-timeline .tl-slidenav-previous,
 .tl-timeline .tl-message,
 .tl-timeline .tl-timegroup-message {
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: none;
     font-optical-sizing: auto;
 }
-
-.tl-timeline .tl-message,
-.tl-timeline .tl-timegroup-message {
-    font-weight: 300;
-    font-size: 0.667em;
-}
-
-.tl-timegroup .tl-timegroup-message {
-  color: #000000;
-  text-shadow: 0;
-  margin-left: 60px;
-}
-
 .tl-timeline .tl-slidenav-next .tl-slidenav-title,
 .tl-timeline .tl-slidenav-previous .tl-slidenav-title,
 .tl-timeline .tl-message .tl-slidenav-title,
 .tl-timeline .tl-timegroup-message .tl-slidenav-title {
-    line-height: 1.3em !important;
-
+  line-height: 1.3em !important;
 }
-
 .tl-timeline .tl-headline-date,
 .tl-timeline h3.tl-headline-date {
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: normal !important;
+    font-weight: 300 !important;
     text-transform: none !important;
     font-optical-sizing: auto;
-    /* color:rgb(0, 0, 0)!important; */
     line-height: 1.2;
+    letter-spacing: 0.02em;
 
 }
-
 .tl-timeline .tl-headline-date small,
 .tl-timeline h3.tl-headline-date small {
-    font-weight: normal !important;
-
+  font-weight: normal !important;
 }
-
-.tl-timemarker.tl-timemarker-active .tl-timemarker-timespan {
-  background-color: rgba(0, 147, 255, 0.14);
-}
-
-
 .tl-timeline .tl-timenav-slider {
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: 700;
+    font-weight: 600;
     font-optical-sizing: auto;
-
-
 }
-
 .tl-timeline .tl-timenav-slider h2.tl-headline {
-    font-family: "Archivo Narrow", sans-serif;
-    font-weight: 700;
-    text-transform: none;
-    font-optical-sizing: auto;
-
-
-}
-
-.tl-timeline .tl-timenav-slider .tl-timeaxis {
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: none;
     font-optical-sizing: auto;
-
-
 }
-
-/* Januar - Februar etc. plus Jahreszahlen */
+.tl-timeline .tl-timenav-slider .tl-timeaxis {
+  font-family: 'Helvetica Neue', Helvetica, Arial, "MS Trebuchet", sans-serif;
+  font-weight: 800;
+  text-transform: none;
+}
 .tl-timeaxis-tick-text {
     font-optical-sizing: auto;
-    color: #666 !important;
-    font-weight: 300 !important;
+    font-weight: 300;
     text-rendering: geometricPrecision;
     letter-spacing: 0.02em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-size: 90%;
 }
-
 .tl-timeaxis-major .tl-timeaxis-tick-text {
-
     font-weight: 700 !important;
     font-size: 100%;
-
 }
-
 .tl-timeline .tl-menubar {
     font-family: "Archivo Narrow", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
     font-optical-sizing: auto;
-
-
 }
-
 .tl-timeline blockquote,
 .tl-timeline blockquote p {
     font-family: "Newsreader", serif;
@@ -292,15 +185,12 @@
     font-weight: 200;
     line-height: 1.3;
     font-optical-sizing: auto;
-
 }
-
 input[type="text"].editor-headline {
     font-family: "Archivo Narrow", sans-serif;
     text-transform: none;
-    font-weight: 700;
-    font-size: 46px;
-    line-height: 46px;
+    font-weight: 800;
+    font-size: 3.2em;
+    line-height: 1.05;
     font-optical-sizing: auto;
-
 }

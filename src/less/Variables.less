@@ -15,8 +15,8 @@
 @font-main:						@font-sanserif;
 @font-secondary:				@font-serif;
 
-@base-font-size: 				15px;
-@base-font-size-small: 			11px;
+@base-font-size: 				16px;
+@base-font-size-small: 			12px;
 @base-font-size-large: 			24px;
 @base-font-size-xlarge: 		28px;
 
@@ -30,6 +30,7 @@
 @color-dark: 					#000;
 
 @color-theme:					#ffea03; /* --fix wR */
+@color-timespan:				rgb(0, 147, 255); /* --fix wR */
 
 @color-theme-dark:				darken(@color-theme, 15);
 
@@ -41,7 +42,7 @@
 @color-theme-split1:			spin(@color-theme, -158);
 @color-theme-split2:			spin(@color-theme, 158);
 
-@color-text: 					lighten(@color-foreground,25);
+@color-text: 					lighten(@color-foreground,0);
 @color-header-text: 			@color-dark;
 
 @color-text-inverted:			darken(@color-background,5);
@@ -85,7 +86,7 @@
 @arrow-size: 					20px;
 
 // Note
-@note-color-background:         #ffd500;
+@note-color-background:         darken(@color-theme,15);
 
 // Marker
 @time-marker-border-radius: 	0;  /* that's ugly --fix wR */

@@ -1,3 +1,4 @@
+// out: false
 .tl-timeline {
 	font-family: @font-main;
 	
@@ -110,7 +111,7 @@
 	.tl-caption, .tl-credit, .tl-slidenav-next, .tl-slidenav-previous {
 		//font-family: @font-sanserif;
 		font-size:@base-font-size-small;
-		line-height:@base-font-size-small;
+		line-height:@base-font-size-small * 1.2;
 		a {
 			color: @color-dark;
 		}
@@ -287,7 +288,7 @@
 	
 }
 // Mobile, iPhone and skinny
-@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+@media only screen and (max-width: 650px), only screen and (max-device-width: 650px) {
 	.tl-timeline {
 		h1, h2, h3 {
 			font-size: @base-font-size-xlarge - 4;

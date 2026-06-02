@@ -1,3 +1,4 @@
+// out: false
 /* Requires Variables.less
 ================================================== */
 .tl-media {
@@ -19,7 +20,8 @@
 		}
 		.tl-media-content{
 			position: relative;
-			.clearfix();
+			/* .clearfix(); --wR */
+
 
 			.tl-media-loaderror {
 				p {
@@ -101,12 +103,16 @@
 ================================================== */
 .tl-caption {
 	text-align: left;
-	margin-right: auto;
-	margin-left: auto;
+	/* margin-right: auto;
+	margin-left: auto; --wR */
 	margin-top: 10px;
-	color: #666666;
-	font-size: @base-font-size-small;
-	line-height: 14px;
+
+	color: lighten(@color-text,45);
+
+	font-family:@font-main;/* --wR */
+	line-height: 1.2; /* --wR 
+	font-size: @base-font-size-small; 
+	line-height: 14px; */
 	text-rendering: optimizeLegibility;
 	word-wrap: break-word;
 }
@@ -148,10 +154,10 @@
 			}
 
 			.tl-credit, .tl-caption {
-				margin-top: 2px;
-				padding-left:10px;
-				padding-right:10px;
-				font-size:8px;
+				margin-top: .8em;
+				/*padding-left:10px;
+				padding-right:10px; --wR */
+				font-size: .8em;
 			}
 			.tl-credit {
 				margin-top: 0px;

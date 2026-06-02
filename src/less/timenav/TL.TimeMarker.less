@@ -143,13 +143,20 @@
 			overflow:hidden;
 			height:100%;
 			z-index:8;
-			padding:5px;
+			padding:1cqh;
 			/* padding:0; and display: flex; and gap: 5px might work better ---fix wR */
 			.border-box();
 			
 			.tl-timemarker-text {
 				overflow:hidden;
 				position: relative;
+				h2.tl-headline {
+					display:block;
+					white-space:nowrap; 
+					text-overflow: ellipsis;
+					line-height: 1.5; /* ---fix wR */
+
+				}
 				
 				h2.tl-headline, h2.tl-headline p {
 					display: -webkit-box;
@@ -161,7 +168,8 @@
 					text-overflow: ellipsis;
 					
 					font-size:12px;
-					line-height:12px; /* line-height: 1.5 ? ---fix wR */
+					/* line-height:12px; ---fix wR */
+					line-height: 1;
 					height:100%;
 					overflow:hidden;
 					font-weight:normal;
@@ -216,11 +224,14 @@
 			}
 			
 			&.tl-timemarker-content-small {
+				padding:0.667cqh;
+
 				.tl-timemarker-text {
 					h2.tl-headline {
 						display:block;
 						white-space:nowrap; 
 						text-overflow: ellipsis;
+						line-height: 1; /* ---fix wR */
 					}
 				}
 				.tl-timemarker-media-container {
@@ -273,6 +284,8 @@
 				.tl-timemarker-content {
 					.tl-timemarker-text {
 						h2.tl-headline {
+							white-space:nowrap; 
+							text-overflow: ellipsis;
 							//line-clamp:3 !important;
 							//-webkit-line-clamp:3 !important;
 							//white-space: normal !important;
@@ -356,7 +369,9 @@
 		.tl-timemarker-timespan {
 			//background-color: fadeout(@color-theme, 85%);
 			//background-color: fadeout(@color-foreground, 85%);
-			background-color: fadeout(@color-background,50%);
+			/* background-color: fadeout(@color-background,50%); 
+			background-color: rgba(0, 147, 255, 0.14); --wR */
+			background-color: fade(@color-timespan,12);
 			z-index: 8;
 			.tl-timemarker-timespan-content {
 				//background-color: @color-theme;
