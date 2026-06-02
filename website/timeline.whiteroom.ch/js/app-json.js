@@ -12,9 +12,11 @@ window.timeline = new TL.Timeline('timeline-embed', 'data/timeline.json', {
         language: 'de',
         hash_bookmark: false,
         marker_padding: 8,
+        marker_width_min: 60,
         slide_padding_lr: 100,
         start_at_slide: 11,
         scale_factor: 0.667,
+        timenav_height_percentage: 20,
     });
 
 
