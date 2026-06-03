@@ -6528,7 +6528,7 @@ var TL;
                 if (t && _i(t), this.options.theme && (0 == this.options.theme.indexOf("http") || this.options.theme.match(/\.css$/))) e = this.options.theme;
                 else if (this.options.theme) {
 
-                    let t = this.options.script_path + "/css/themes/timeline.theme." + this.options.theme.toLowerCase() + ".css";
+                    let t = this.options.script_path + "../css/themes/timeline.theme." + this.options.theme.toLowerCase() + ".css";
                     //e = new URL(t, this.options.script_path);
                     e = new URL(t, document.baseURI).href;
                     console.log(e)
