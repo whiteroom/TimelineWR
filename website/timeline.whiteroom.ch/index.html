@@ -30,7 +30,7 @@
                 language: 'de',
                 hash_bookmark: false,
                 marker_width_min: 60,
-                marker_height_min: 25,
+                marker_height_min: 30,
                 slide_padding_lr: 100,
                 start_at_slide: 11,
                 scale_factor: 0.667,
@@ -40,6 +40,11 @@
         var bottomOffset = 40; embed.style.height = getEmbedHeight(bottomOffset);
         window.addEventListener('resize', function () { embed.style.height = getEmbedHeight(bottomOffset); timeline.updateDisplay();})
         function getEmbedHeight(bottomOffset = 0) { const bodyHeight = parseInt(getComputedStyle(document.body).height); return (bodyHeight - bottomOffset) + "px";}
+
+        // Export as JSON
+        // let url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQeIEfze-0GvRB0qLh4K4D_QUl4GeqHA6XOFKIqDniWrB_L6dKwqZUtboY3a3ItturFe1Ct0QEhGn4y/pubhtml'
+        // TL.exportJSON(url).then(console.log)
+        
     </script>
 </body>
 

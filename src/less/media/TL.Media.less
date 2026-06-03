@@ -91,12 +91,12 @@
 ================================================== */
 .tl-credit {
 	color: @color-text-credit;
-	text-align: right;
+	text-align: left;
 	display: block;
-	margin: 0 auto;
-	margin-top: 6px;
+	/* margin: 0 auto; --wR */
+	margin-top: @base-font-size-small*0.5;
 	font-size: @base-font-size-small - 1;
-	line-height: 13px;
+	line-height: 1; /* --wR */
 }
 
 /* Caption
@@ -105,7 +105,7 @@
 	text-align: left;
 	/* margin-right: auto;
 	margin-left: auto; --wR */
-	margin-top: 10px;
+	margin-top: @base-font-size-small*0.5;
 
 	color: lighten(@color-text,45);
 
@@ -115,6 +115,10 @@
 	line-height: 14px; */
 	text-rendering: optimizeLegibility;
 	word-wrap: break-word;
+}
+
+.tl-credit + .tl-caption {
+	margin-top: 0!important;
 }
 
 /* Full Image Background

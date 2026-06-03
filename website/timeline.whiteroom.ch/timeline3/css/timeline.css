@@ -255,7 +255,7 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   margin-top: 10px;
 }
 .tl-timeline .vcard:before,
@@ -1139,8 +1139,8 @@
   float: left;
   /* that's ugly ---fix wR */
   /* width:@marker-icon-size; ---fix wR */
-  max-width: 24px;
-  max-height: 24px;
+  max-width: 12px;
+  max-height: 12px;
   overflow: hidden;
   /* margin-right:0; using flexbox doesn't need this  ---fix wR */
   margin-right: 5px;
@@ -1152,14 +1152,14 @@
   box-sizing: border-box;
 }
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container .tl-timemarker-media {
-  max-width: 24px;
+  max-width: 12px;
   max-height: 100%;
   opacity: 0.25;
 }
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class^="tl-icon-"],
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-media-container [class*=" tl-icon-"] {
   display: block;
-  font-size: 24px;
+  font-size: 12px;
   color: #bfbfbf;
   margin-top: 0px;
 }
@@ -1178,7 +1178,7 @@
 }
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-media-container [class^="tl-icon-"],
 .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content.tl-timemarker-content-small .tl-timemarker-media-container [class*=" tl-icon-"] {
-  font-size: 24px/2;
+  font-size: 12px/2;
 }
 .tl-timemarker:hover .tl-timemarker-timespan,
 .tl-timemarker:focus .tl-timemarker-timespan {
@@ -1577,7 +1577,7 @@
 /* TL.TimeAxis
 ================================================== */
 .tl-timeaxis-background {
-  height: 39px;
+  height: 38.8px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -1587,7 +1587,7 @@
   z-index: 2;
 }
 .tl-timeaxis {
-  height: 39px;
+  height: 38.8px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -1597,7 +1597,7 @@
 .tl-timeaxis .tl-timeaxis-content-container {
   position: relative;
   bottom: 0;
-  height: 39px;
+  height: 38.8px;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major,
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor {
@@ -1627,7 +1627,7 @@
   color: #ffffff;
   width: 1px;
   overflow: hidden;
-  border-left: 1px solid #bfbfbf;
+  border-left: 1px solid #0d0d0d;
   text-align: center;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major.tl-timeaxis-animate .tl-timeaxis-tick,
@@ -1659,21 +1659,21 @@
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick {
   font-size: 12px;
   line-height: 14px;
-  color: #737373;
+  color: #000000;
   width: 100px;
   margin-left: -50px;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick:before {
-  border-color: #a6a6a6;
+  border-color: #000000;
   font-size: 18px;
   line-height: 18px;
   margin-bottom: 2px;
   margin-left: 50px;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick {
-  font-size: 11px;
-  line-height: 13px;
-  color: #bfbfbf;
+  font-size: 10.8px;
+  line-height: 12.8px;
+  color: #0d0d0d;
   width: 50px;
   margin-left: -25px;
 }
@@ -1688,11 +1688,11 @@
   font-size: 9px;
   line-height: 9px;
   margin-top: -2px;
-  color: #e6e6e6;
+  color: #333333;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick:before {
-  font-size: 9px;
-  line-height: 9px;
+  font-size: 8.8px;
+  line-height: 8.8px;
   margin-left: 25px;
 }
 .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick.tl-timeaxis-tick-hidden .tl-timeaxis-tick-text {
@@ -2453,12 +2453,13 @@
 ================================================== */
 .tl-credit {
   color: #999999;
-  text-align: right;
+  text-align: left;
   display: block;
-  margin: 0 auto;
+  /* margin: 0 auto; --wR */
   margin-top: 6px;
   font-size: 11px;
-  line-height: 13px;
+  line-height: 1;
+  /* --wR */
 }
 /* Caption
 ================================================== */
@@ -2466,7 +2467,7 @@
   text-align: left;
   /* margin-right: auto;
 	margin-left: auto; --wR */
-  margin-top: 10px;
+  margin-top: 6px;
   color: #959595;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   /* --wR */
@@ -2476,6 +2477,9 @@
 	line-height: 14px; */
   text-rendering: optimizeLegibility;
   word-wrap: break-word;
+}
+.tl-credit + .tl-caption {
+  margin-top: 0!important;
 }
 /* Full Image Background
 ================================================== */
@@ -2639,7 +2643,7 @@
 }
 .tl-media .tl-media-twitter blockquote {
   margin: 0;
-  margin-right: 15px;
+  margin-right: 16px;
   font-size: 16px;
   line-height: 22px;
   color: #222;
@@ -2692,7 +2696,7 @@
 }
 .tl-media .tl-media-blockquote blockquote {
   margin: 0;
-  margin-right: 15px;
+  margin-right: 16px;
   text-align: left;
   font-size: 28px;
   line-height: 30px;
@@ -2721,7 +2725,7 @@
   line-height: 22px;
   color: #888888;
   text-align: right;
-  margin-top: 15px;
+  margin-top: 16px;
 }
 .tl-slide-media-only .tl-media .tl-media-blockquote {
   border-right: 0;
@@ -3147,7 +3151,7 @@ body {
   cursor: pointer;
   z-index: 9;
   position: absolute;
-  bottom: -10px;
+  bottom: -16px;
   /* fix --wR */
   right: 10px;
   /* fix --wR */
