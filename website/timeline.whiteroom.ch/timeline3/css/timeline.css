@@ -1994,8 +1994,12 @@
   max-width: unset !important;
   /* --wR */
   height: auto;
-  /* float: none; --wR */
-  display: block;
+  /* float: none; 
+					display:block; --wR */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 20px;
   /* border-top: 1px solid @ui-background-color-darker; --wR */
 }
@@ -2006,7 +2010,8 @@
   vertical-align: initial;
   position: static;
   width: 100%;
-  max-width: 100%;
+  max-width: 90%;
+  /* --wR */
   min-width: 0;
   /* float:none; --wR */
   padding: 0;
@@ -2356,7 +2361,6 @@
   position: absolute;
 }
 .tl-storyslider .tl-slider-container-mask {
-  text-align: center;
   width: 100%;
   height: 100%;
   position: relative;
@@ -2368,7 +2372,6 @@
   left: 0px;
   width: 100%;
   height: 100%;
-  text-align: center;
 }
 .tl-storyslider .tl-slider-container-mask .tl-slider-container .tl-slider-item-container {
   width: 100%;
@@ -2946,6 +2949,10 @@
 .tl-media .tl-media-iframe {
   width: 100%;
   height: 100%;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tl-media .tl-media-iframe iframe {
   width: 100%;
@@ -2954,7 +2961,7 @@
 }
 @media only screen and (max-width: 800px), only screen and (max-device-width: 800px) {
   .tl-media .tl-media-iframe {
-    max-height: 100vw!important;
+    background: transparent;
   }
 }
 .tl-media .tl-media-wikipedia {
