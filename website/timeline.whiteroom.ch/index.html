@@ -10,19 +10,40 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="js/timeline3/css/timeline.css">
+    <link rel="stylesheet" href="timeline3/css/timeline.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/workaround.css"> -->
 
-    <script src="js/timeline3/js/timeline-min.js"></script>
+    <script src="timeline3/js/timeline-min.js"></script>
     <script src="js/lib/jquery-3.7.1.min.js"></script>
-    <script defer src="js/app-json.js"></script>
+    
 </head>
 
 <body>
-    <div id="timeline-embed" style="overflow:visible;">
-        <div id="timeline"></div>
-    </div>
+    <div id="timeline-embed" style="overflow:visible;"></div>
+
+
+    <script>
+        var embed = document.getElementById('timeline-embed');
+
+        window.timeline = new TL.Timeline(embed, 'data/timeline.json', {
+                //theme: 'dark',
+                //default_bg_color: "#222222",
+                font: 'css/fonts.css',
+                script_path: 'timeline3/js/',
+                language: 'de',
+                hash_bookmark: false,
+                marker_width_min: 60,
+                marker_height_min: 25,
+                slide_padding_lr: 100,
+                start_at_slide: 11,
+                scale_factor: 0.667,
+                timenav_height_percentage: 20,
+            });
+
+        var bottomOffset = 40; embed.style.height = getEmbedHeight(bottomOffset);
+        window.addEventListener('resize', function () { embed.style.height = getEmbedHeight(bottomOffset); timeline.updateDisplay();})
+        function getEmbedHeight(bottomOffset = 0) { const bodyHeight = parseInt(getComputedStyle(document.body).height); return (bodyHeight - bottomOffset) + "px";}
+    </script>
 </body>
 
 </html>
